@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+	  <link rel="stylesheet" href="styles.css">
+    <title> Demo Grupo 2 - Contratante </title>
+  </head>
+	
+  <body>
+
+	  <h1 id="title">Interface do Contratante</h1>
+
+    <div class="row">
+
+	    <div class="column" id="pendentes">
+		    <h2>Pendentes</h2>
+		  </div>
+
+      <div class="column" id="aceitos_contratante">
+		    <h2>Aceitos</h2>
+      </div>
+
+      <div class="column" id="deslocamento_contratante">
+		    <h2>Em Deslocamento</h2>
+      </div>
+
+	    <div class="column" id="completos_contratante">
+		    <h2>Completos</h2>
+	    </div>
+  
+    </div>
+
+		<button id="request_button">
+			<span class="row">
+				<span id="red_cross">&#10010;</span>
+				<span id="bttn_txt_req">Nova<br>Requisição</span>
+			</span>
+		</button>
+
+		<div id="request_modal" class="modal">
+			<div id="modal-content">
+				<span class="close">&times;</span>
+
+				<form id="form" onsubmit="return requestForm(this)">
+					<h2>Nova requisição</h2>
+					<label for="origem"><b>Origem:</b>&nbsp;&nbsp;</label>
+						<input type="text" id="origem" name="origem" size="90"><br><br>
+					<label for="destino"><b>Destino:&nbsp;&nbsp;</b></label>
+						<input type="text" id="destino" name="destino" size="90"><br><br>
+
+					<b>Urgência:</b>
+						<input type="radio" id="altissima" name="urgencia" value="Altíssima">
+						<label for="altissima"><b>Altíssima</b></label>
+						<input type="radio" id="alta" name="urgencia" value="Alta">
+						<label for="alta"><b>Alta</b></label>
+						<input type="radio" id="media" name="urgencia" value="Média">
+						<label for="media"><b>Média</b></label>
+						<input type="radio" id="baixa" name="urgencia" value="Baixa">
+						<label for="baixa"><b>Baixa</b></label><br><br>
+
+					<label for="horario_chegada"><b>Horário de Chegada:</b></label>
+						&nbsp;&nbsp;<input type="time" id="horario_chegada" name="horario_chegada"><br><br>
+
+					<label for="obs"><b>Obs:</b></label><br>
+						<textarea id="obs" name="obs" rows="3" cols="94" wrap="soft"></textarea><br><br>
+
+					<label for="valor_desejado"><b>Valor Desejado:</b></label>
+						<b>R$</b>&nbsp;<input type="number" id="valor_desejado" name="valor_desejado" step="0.01"><br><br><br>
+
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+
+		<script src="scripts.js"></script>
+
+  </body>
+
+</html>
